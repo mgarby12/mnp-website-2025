@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title>Home/About Us</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to My Flask Website</h1>
-    <p>This is rendered using Jinja2 templates!</p>
+    <nav>
+        <a href="{{ url_for('main.home') }}">Home</a>
+        <a href="{{ url_for('main.projects') }}">Projects</a>
+        <a href="{{ url_for('main.subteams') }}">Subteams</a>
+        <a href="{{ url_for('main.joinus') }}">Join Us</a>
+        <a href="{{ url_for('main.faq') }}">FAQ</a>
+    </nav>
+
+    <h1>Welcome to Michigan Neuroprosthetics</h1>
+    <p>This is the homepage.</p>
 </body>
 </html>

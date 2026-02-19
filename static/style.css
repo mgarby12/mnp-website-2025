@@ -6,8 +6,8 @@ body {
 }
 .navText {
             width: 100%;
-            background-color: #f0f0f0;    /* #89b2e7 */
-            border: 5px solid #4f83c7;
+            background-color: #89b2e7;    /* #89b2e7 */
+           /* border: 5px solid #4f83c7;*/
             padding: 5px 40px;
             box-sizing: border-box;
             display: flex;
@@ -24,7 +24,7 @@ body {
         .navText a,
         .navText a:visited,
         .navText a:active {
-            color: #4f83c7;
+            color: #f0f0f0;
             font-size: 30px;
             letter-spacing: -.5px;
             font-family: "IBM Plex Sans", sans-serif;
@@ -36,7 +36,7 @@ body {
             text-decoration: none;   /* remove underline */
         }
         .navText a:hover {
-            color: #4f83c7;
+            color: #ffffff;
             text-decoration: underline;
         }
 
@@ -53,7 +53,7 @@ body {
 
 .hero-text h1 {
         font-size: 60px;
-        color:#4f83c7;
+        color:#89b2e7;
         font-weight: 700;
         margin-bottom: 10px;
         font-family: "IBM Plex Sans", sans-serif;

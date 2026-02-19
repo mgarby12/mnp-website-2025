@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <nav class="navText">
+        <img src="{{ url_for('static', filename='media/images/logoStretched.png') }}" alt="Logo" class="logo">
         <a href="{{ url_for('main.home') }}">Home</a>
         <a href="{{ url_for('main.projects') }}">Projects</a>
         <a href="{{ url_for('main.subteams') }}">Subteams</a>

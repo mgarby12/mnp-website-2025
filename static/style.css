@@ -2,30 +2,72 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 .navText {
             width: 100%;
-            background-color: #000959;      
-            padding: 10px 20px;
+            background-color: #f0f0f0;    /* #89b2e7 */
+            border: 5px solid #4f83c7;
+            padding: 5px 40px;
             box-sizing: border-box;
             display: flex;
-            justify-content: flex-end; /* align links right */
+            justify-content: flex-end;  /*align links right */
+            align-items: center;
         }
+
+.logo {
+        width: 180px;
+        height: auto;   /* keeps proportions */
+        margin-right: auto
+      }
 
         .navText a,
         .navText a:visited,
         .navText a:active {
-            color: white;
-            font-size: 22px;
-            font-family: "Verdana";
+            color: #4f83c7;
+            font-size: 30px;
+            letter-spacing: -.5px;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-weight: 500;
             word-spacing: 1px;
-            margin-right: 30px; /* space to the right of each link */
+            margin-right: 40px; /* space to the right of each link */
             text-align: right;
-            font-variant: small-caps;
+            font-variant: normal;
             text-decoration: none;   /* remove underline */
         }
         .navText a:hover {
-            color: white;
+            color: #4f83c7;
             text-decoration: underline;
         }
+
+.hero {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 12%;
+        background-color: #f0f0f0;
+    } 
+    .hero-text {
+        max-width: 50%;
+        text-align: left;
+    }
+
+.hero-text h1 {
+        font-size: 60px;
+        color:#4f83c7;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: "IBM Plex Sans", sans-serif;
+        line-height: 1;
+    }
+
+.hero-text p {
+        font-size: 20px;
+        color: #444;
+        font-family: "IBM Plex Sans", sans-serif;
+        word-spacing: 1px;
+    }
+
+.hero-image img {
+        width: 400px;
+        height: auto;
+    }

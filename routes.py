@@ -21,3 +21,5 @@ def faq():
 @main_routes.route('/subteams')
 def subteams():
     return render_template('subteams.html')
+
+

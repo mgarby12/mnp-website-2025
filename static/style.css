@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -21,9 +25,9 @@ body {
         margin-right: auto
       }
 
-        .navText a,
-        .navText a:visited,
-        .navText a:active {
+.navText a,
+.navText a:visited,
+.navText a:active {
             color: #f0f0f0;
             font-size: 30px;
             letter-spacing: -.5px;
@@ -35,7 +39,7 @@ body {
             font-variant: normal;
             text-decoration: none;   /* remove underline */
         }
-        .navText a:hover {
+.navText a:hover {
             color: #ffffff;
             text-decoration: underline;
         }
@@ -46,7 +50,8 @@ body {
         padding: 80px 12%;
         background-color: #f0f0f0;
     } 
-    .hero-text {
+
+.hero-text {
         max-width: 50%;
         text-align: left;
     }
@@ -71,3 +76,71 @@ body {
         width: 400px;
         height: auto;
     }
+
+.scroll-button {
+        background-color: #89b2e7;
+        font-size: 25px;
+        font-family: "IBM Plex Sans", sans-serif; 
+        font-weight: 400;
+        word-spacing: 1px;
+        color: #f0f0f0;              
+        padding: 14px 25px;        
+        text-align: center;        
+        text-decoration: none;    
+        display: inline-block;     
+        border-radius: 4px;   
+        margin-top: 10px;
+}
+.scroll-button:hover {
+        background-color: #6e98ce;
+        color: #ffffff;
+        text-decoration: underline;
+}
+
+.we-are {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        background-color: #f0f0f0;
+    } 
+
+.we-are-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: center;
+    align-items: center;    
+
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.we-are-text h1 {
+        font-size: 35px;
+        color:#89b2e7;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: "IBM Plex Sans", sans-serif;
+        line-height: 1;
+        text-align: center;
+        
+}
+
+.we-are-text h2 {
+        font-size: 25px;
+        color:#89b2e7;
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-family: "IBM Plex Sans", sans-serif;
+        line-height: 1;
+        width: 230px;
+}
+
+.we-are-text p {
+    font-size: 20px;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+    word-spacing: 1px;
+    width: 230px;
+}

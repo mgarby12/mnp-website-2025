@@ -9,21 +9,21 @@ body {
     margin-top: 5px;
 }
 .navText {
-            width: 100%;
-            background-color: #89b2e7;    /* #89b2e7 */
-           /* border: 5px solid #4f83c7;*/
-            padding: 5px 40px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: flex-end;  /*align links right */
-            align-items: center;
-        }
+        width: 100%;
+        background-color: #89b2e7;    /* #89b2e7 */
+        padding: 5px 40px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;  /*align links right */
+        align-items: center;
+}
 
 .logo {
-        width: 180px;
-        height: auto;   /* keeps proportions */
-        margin-right: auto
-      }
+    width: 180px;
+    height: auto;   /* keeps proportions */
+    margin-right: auto;
+    filter: drop-shadow(0 0 2px white);
+}
 
 .navText a,
 .navText a:visited,
@@ -47,12 +47,12 @@ body {
 .hero {
         display: flex;
         justify-content: space-between;
-        padding: 80px 12%;
         background-color: #f0f0f0;
+        padding: 80px 80px 1px
     } 
 
 .hero-text {
-        max-width: 50%;
+        max-width: 55%;
         text-align: left;
     }
 
@@ -60,35 +60,36 @@ body {
         font-size: 60px;
         color:#89b2e7;
         font-weight: 700;
-        margin-bottom: 10px;
+        margin-top: 80px;
+        margin-bottom: 30px;
         font-family: "IBM Plex Sans", sans-serif;
         line-height: 1;
     }
 
 .hero-text p {
-        font-size: 20px;
+        font-size: 25px;
         color: #444;
         font-family: "IBM Plex Sans", sans-serif;
         word-spacing: 1px;
     }
 
 .hero-image img {
-        width: 400px;
+        width: 430px;
         height: auto;
     }
 
 .scroll-button {
         background-color: #89b2e7;
-        font-size: 25px;
+        font-size: 27px;
         font-family: "IBM Plex Sans", sans-serif; 
-        font-weight: 400;
+        font-weight: 450;
         word-spacing: 1px;
         color: #f0f0f0;              
-        padding: 14px 25px;        
+        padding: 14px 35px;        
         text-align: center;        
         text-decoration: none;    
         display: inline-block;     
-        border-radius: 4px;   
+        border-radius: 35px;   
         margin-top: 10px;
 }
 .scroll-button:hover {
@@ -99,42 +100,42 @@ body {
 
 .we-are {
         display: flex;
-        justify-content: center;
-        width: 100%;
-        align-items: center;
         background-color: #f0f0f0;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 80px 40px;
+        max-width: 100%;
     } 
 
 .we-are-text {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px; 
+    gap: 40px; 
     justify-content: center;
-    align-items: center;    
-
     width: fit-content;
     margin: 0 auto;
 }
 
 .we-are-text h1 {
-        font-size: 35px;
-        color:#89b2e7;
-        font-weight: 500;
-        margin-bottom: 10px;
-        font-family: "IBM Plex Sans", sans-serif;
-        line-height: 1;
-        text-align: center;
-        
+    font-size: 35px;
+    color:#89b2e7;
+    font-weight: 550;
+    margin-bottom: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+    text-align: center; 
+    width: 500px
 }
 
 .we-are-text h2 {
-        font-size: 25px;
-        color:#89b2e7;
-        font-weight: 400;
-        margin-bottom: 10px;
-        font-family: "IBM Plex Sans", sans-serif;
-        line-height: 1;
-        width: 230px;
+    font-size: 25px;
+    color:#89b2e7;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+    width: 250px;
+    align-items: center;    
 }
 
 .we-are-text p {
@@ -142,5 +143,120 @@ body {
     color: #444;
     font-family: "IBM Plex Sans", sans-serif;
     word-spacing: 1px;
-    width: 230px;
+    width: 250px;
+    margin-top: 10px
+}
+
+.we-are-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 240px;
+    margin: 0 auto;
+    
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #89b2e7 !important; /* This is the new color */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.icon-blue {
+    width: 50px;
+    height: 50px;
+    /* This specific filter converts BLACK to #89b2e7 (Light Blue) */
+    filter: invert(72%) sepia(16%) saturate(1028%) hue-rotate(178deg) brightness(97%) contrast(93%);
+}
+
+.slideshow {
+    position: relative;
+    margin-right: 60px;
+    overflow: hidden;
+    width: 450px; 
+    height: 550px;
+    
+    border: 4px solid #89b2e7; /* Added 'solid' so the border actually shows */
+    border-radius: 2px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+    /* Initial state: invisible */
+    opacity: 0;
+  
+    /* Total animation time (e.g., 20s for 4 images = 5s per image) */
+    animation: fade-rotate 20s infinite;
+}
+
+/* Stagger the start times */
+/* If total time is 20s and you have 4 images, delay by 5s increments */
+    .slide:nth-child(1) { animation-delay: 0s; }
+    .slide:nth-child(2) { animation-delay: 5s; }
+    .slide:nth-child(3) { animation-delay: 10s; }
+    .slide:nth-child(4) { animation-delay: 15s; }
+
+@keyframes fade-rotate {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; } /* Fade in quickly at the start */
+    25%  { opacity: 1; } /* Stay solid for a bit */
+    35%  { opacity: 0; } /* Fade out */
+    100% { opacity: 0; } /* Stay invisible for the rest of the loop */
+}
+
+.testimonial {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 30px 80px 80px;
+} 
+
+.testimonial-text {
+    text-align: left;
+}
+
+.testimonial-text p {
+    font-size: 25px;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: italic;
+    word-spacing: 1px;
+    margin-bottom: 10px
+}
+
+.testimonial-text h1 {
+    font-size: 35px;
+    color:#89b2e7;
+    font-weight: 600px;
+    margin-bottom: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+}
+
+.testimonial-text h2 {
+    font-size: 30px;
+    color:#89b2e7;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-right: 90px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+    text-align: right;
+    font-style: italic;
+    margin-top: 10px
 }

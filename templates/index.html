@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navText">
-        <img src="{{ url_for('static', filename='media/images/logoStretched.png') }}" alt="Logo" class="logo">
+        <img src="{{ url_for('static', filename='media/images/logoStretched.png') }}" alt="MNP Logo" class="logo">
         <a href="{{ url_for('main.home') }}">Home</a>
         <a href="{{ url_for('main.projects') }}">Projects</a>
         <a href="{{ url_for('main.subteams') }}">Subteams</a>
@@ -29,29 +29,73 @@
         </div>
 
         <div class="hero-image">
-            <img src="{{ url_for('static', filename='media/images/handDrawing.png') }}" 
-                alt="Neuroprosthetics Image">
+            <img src="{{ url_for('static', filename='media/images/BWhand.jpeg') }}" 
+                alt="Black and White Robotic Hand Image">
         </div>
     </section>
 
+    <section class="testimonial">
+        <div class="testimonial-text">
+            <h1>Client Testimonial</h1>
+            <p>"Working with the team at the University of Michigan on my 3D printed arm has been an incredible experience. The people involved are highly skilled along with being genuinely passionate about creating something that can make a real difference in my life; something that changes the way I see things. Collaborating with them has been inspiring as they design a prosthetic that feels personalized and functional to me. Their dedication and support have made this journey both exciting and very interesting. I look forward to seeing where they can go with this, and I’m glad I’ve been a part of the process. Thanks!"</p>
+            <h2>- Michael</h2>
+        </div>
+    </section>
+                
+
     <section id="about-us"class="we-are">
+
+        <div class="slideshow">
+            <img src="{{ url_for('static', filename='media/images/image13.jpg') }}" 
+                alt="MNP members working" class="slide">
+            <<img src="{{ url_for('static', filename='media/images/image12.jpg') }}" 
+                alt="MNP members working" class="slide">
+            <img src="{{ url_for('static', filename='media/images/image8.jpg') }}" 
+                alt="MNP members working" class="slide">
+            <img src="{{ url_for('static', filename='media/images/image3.jpg') }}" 
+                alt="MNP members working" class="slide">
+        </div>
+
         <div>
             <div class="we-are-text">
-                <h1>We are committed to making designs that are</h1>
+                <h1>We are committed to making designs that are:</h1>
             </div>
+
             <div class="we-are-text">
-                <h2>LOW COST</h2>
-                <h2>LIGHTWEIGHT</h2>
+                <h2 >LOW COST</h2>
                 <h2>CUSTOMIZABLE</h2>
-                <h2>OPEN-SOURCE</h2>
             </div>
+
+            <div class="we-are-icons">
+                <img src="{{ url_for('static', filename='media/images/cost.png') }}" 
+                alt="Cost icon" class="icon-blue">
+                <img src="{{ url_for('static', filename='media/images/customizable.png') }}" 
+                alt="Customizable Filters icon" class="icon-blue">
+            </div>
+
             <div class="we-are-text">
                 <p>We design the arms to be less than $100, and components can be reused as the wearer grows.</p>
-                <p>The arms are 0.5-1.5 lbs, designed for both durability and mobility.</p>
                 <p>The arm is custom fit to each user and can be designed specific to the wearer's needs.</p>
-                <p>We're built on collaborative development to ensure the best wuality possible.</p>
+            </div>
+
+            <div class="we-are-text">
+                <h2>LIGHTWEIGHT</h2>
+                <h2>OPEN-SOURCE</h2>
+            </div>
+
+            <div class="we-are-icons">
+                <img src="{{ url_for('static', filename='media/images/feather.png') }}" 
+                alt="Feather icon" class="icon-blue">
+                <img src="{{ url_for('static', filename='media/images/open-source.png') }}" 
+                alt="Open-Source icon" class="icon-blue">
+            </div>
+
+            <div class="we-are-text">
+                <p>The arms are 0.5-1.5 lbs, designed for both durability and mobility.</p>
+                <p>We're built on collaborative development to ensure the best quality possible.</p>
             </div>
         </div>
+
         
     </section>
 

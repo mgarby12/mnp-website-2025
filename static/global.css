@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: 5px;
+}
+.navText {
+        width: 100%;
+        background-color: #89b2e7;    /* #89b2e7 */
+        padding: 7px 30px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;  /*align links right */
+        align-items: center;
+}
+
+.logo {
+    width: 250px;
+    height: auto;   
+    margin-right: auto;
+    filter: drop-shadow(0 0 2px #f0f0f0);
+}
+
+.navText a,
+.navText a:visited,
+.navText a:active {
+            color: #f0f0f0;
+            font-size: 30px;
+            letter-spacing: -.5px;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-weight: 500;
+            word-spacing: 1px;
+            margin-right: 40px; /* space to the right of each link */
+            text-align: right;
+            font-variant: normal;
+            text-decoration: none;   /* remove underline */
+        }
+.navText a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+.hero {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f0f0f0;
+        padding: 80px 80px 1px
+    } 
+
+.hero-text {
+        max-width: 55%;
+        text-align: left;
+    }

@@ -1,61 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin-top: 5px;
-}
-.navText {
-        width: 100%;
-        background-color: #89b2e7;    /* #89b2e7 */
-        padding: 5px 40px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: flex-end;  /*align links right */
-        align-items: center;
-}
-
-.logo {
-    width: 180px;
-    height: auto;   /* keeps proportions */
-    margin-right: auto;
-    filter: drop-shadow(0 0 2px white);
-}
-
-.navText a,
-.navText a:visited,
-.navText a:active {
-            color: #f0f0f0;
-            font-size: 30px;
-            letter-spacing: -.5px;
-            font-family: "IBM Plex Sans", sans-serif;
-            font-weight: 500;
-            word-spacing: 1px;
-            margin-right: 40px; /* space to the right of each link */
-            text-align: right;
-            font-variant: normal;
-            text-decoration: none;   /* remove underline */
-        }
-.navText a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-
-.hero {
-        display: flex;
-        justify-content: space-between;
-        background-color: #f0f0f0;
-        padding: 80px 80px 1px
-    } 
-
-.hero-text {
-        max-width: 55%;
-        text-align: left;
-    }
-
 .hero-text h1 {
         font-size: 60px;
         color:#89b2e7;
@@ -130,7 +72,7 @@ body {
 .we-are-text h2 {
     font-size: 25px;
     color:#89b2e7;
-    font-weight: 400;
+    font-weight: 450;
     margin-bottom: 10px;
     font-family: "IBM Plex Sans", sans-serif;
     line-height: 1;
@@ -161,22 +103,6 @@ body {
     height: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #89b2e7 !important; /* This is the new color */
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-
-    -webkit-mask-position: center;
-    mask-position: center;
-}
-
-.icon-blue {
-    width: 50px;
-    height: 50px;
-    /* This specific filter converts BLACK to #89b2e7 (Light Blue) */
-    filter: invert(72%) sepia(16%) saturate(1028%) hue-rotate(178deg) brightness(97%) contrast(93%);
 }
 
 .slideshow {

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Subteams</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='subteams.css') }}">
 </head>
 <body>
     <nav class="navText">
-        <img src="{{ url_for('static', filename='media/images/logoStretched.png') }}" alt="Logo" class="logo">
+        <img src="{{ url_for('static', filename='media/images/logoNewOutline.png') }}" alt="Logo" class="logo">
         <a href="{{ url_for('main.home') }}">Home</a>
         <a href="{{ url_for('main.projects') }}">Projects</a>
         <a href="{{ url_for('main.subteams') }}">Subteams</a>
@@ -16,7 +17,101 @@
         <a href="{{ url_for('main.faq') }}">FAQ</a>
     </nav>
 
-    <h1>Subteams</h1>
-    <p>Here are our different subteams</p>
+    <section class="header">
+        <div class="header-text">
+            <h1>Our Team</h1>
+            <p>We are made up of six subteams, each with a unique role that contributes to the development of our final product.</p>
+        </div>
+    </section>
+
+    <section class="subteams">
+        <div class="subteam-card">
+            <img src="{{ url_for('static', filename='media/images/mechanical.png') }}" 
+                alt="Mechanical Subteam Logo" class="subteam-logos">
+            <a href="#mechanical" class="name-scroll">MECHANICAL</a>
+            <p>CAD design, 3D printing, assembly, stability/quality testing</p>
+        </div>
+        <div class="subteam-card">
+            <img src="{{ url_for('static', filename='media/images/electrical.png') }}" 
+                alt="Electrical Subteam Logo" class="subteam-logos">
+            <a href="#electrical" class="name-scroll">ELECTRICAL</a>
+            <p>Circuit board production and embedded electronics</p>
+        </div>
+        <div class="subteam-card">
+            <img src="{{ url_for('static', filename='media/images/interfaces.png') }}" 
+                alt="Interfaces Subteam Logo" class="subteam-logos">
+            <a href="#interfaces" class="name-scroll">INTERFACES</a>
+            <p>Electrode garments, conductive threads, advanced features</p>
+        </div>
+        <div class="subteam-card">
+            <img src="{{ url_for('static', filename='media/images/outreach.png') }}" 
+                alt="Oureach Subteam Logo" class="subteam-logos">
+            <a href="#outreach" class="name-scroll">OUTREACH</a>
+            <p>Community engagement, conferences, recipient coordination, fundraising</p>
+        </div>
+        <div class="subteam-card">
+            <img src="{{ url_for('static', filename='media/images/software.png') }}" 
+                alt="Software Subteam Logo" class="subteam-logos">
+            <a href="#software" class="name-scroll">SOFTWARE</a>
+            <p>Microcontroller algorithms, signal processing, website/app design</p>
+        </div>
+        <div class="subteam-card">
+            <img src="{{ url_for('static', filename='media/images/assembly.png') }}" 
+                alt="Assembly Subteam Logo" class="subteam-logos">
+            <a href="#assembly" class="name-scroll">ASSEMBLY</a>
+            <p>Assembly of components, physical testing, quality assurance</p>
+        </div>
+    </section>
+
+    
+
+    <section id="mechanical" class="subsection">
+        <hr class="divider">
+        <div class="subsection-text">
+            <h1>Mechanical</h1>
+            <p>Here is the information about the mechanical subteam</p>
+        </div>
+    </section>
+
+    <section id="electrical" class="subsection">
+        <hr class="divider">
+        <div class="subsection-text">
+            <h1>Electrical</h1>
+            <p>Here is the information about the electrical subteam</p>
+        </div>
+    </section>
+
+    <section id="interfaces" class="subsection">
+        <hr class="divider">
+        <div class="subsection-text">
+            <h1>Interfaces</h1>
+            <p>Here is the information about the interfaces subteam</p>
+        </div>
+    </section>
+
+    <section id="outreach" class="subsection">
+        <hr class="divider">
+        <div class="subsection-text">
+            <h1>Outreach</h1>
+            <p>Here is the information about the outreach subteam</p>
+        </div>
+    </section>
+
+    <section id="software" class="subsection">
+        <hr class="divider">
+        <div class="subsection-text">
+            <h1>Software</h1>
+            <p>Here is the information about the software subteam</p>
+        </div>
+    </section>
+
+    <section id="assembly" class="subsection">
+        <hr class="divider">
+        <div class="subsection-text">
+            <h1>Assembly</h1>
+            <p>Here is the information about the assembly subteam</p>
+        </div>
+    </section>
+    
 </body>
 </html>

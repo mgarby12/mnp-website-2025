@@ -1,0 +1,112 @@
+.header {
+        display: flex;
+        justify-content: center;
+        background-color: #f0f0f0;
+    } 
+
+.header-text {
+        text-align: center;
+    }
+
+.header-text h1 {
+        font-size: 50px;
+        color:#89b2e7;
+        font-weight: 600;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-family: "IBM Plex Sans", sans-serif;
+        line-height: 1;
+    }
+
+.header-text p {
+        font-size: 25px;
+        color: #444;
+        font-family: "IBM Plex Sans", sans-serif;
+        word-spacing: 1px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+.subteams {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #f0f0f0;
+        align-items: top;
+        gap: 20px;
+}
+
+.subteam-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.subteam-logos{
+    height: 120px;
+}
+
+.subteams p{
+    font-size: 18px;
+    font-style: italic;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+    word-spacing: 1px;
+    text-align: center;
+    max-width: 150px;
+}
+
+.name-scroll {
+        background-color: #f0f0f0;
+        font-size: 23px;
+        padding: 5px 15px; 
+        font-family: "IBM Plex Sans", sans-serif; 
+        font-weight: 450;
+        word-spacing: 1px;
+        color: #89b2e7;              
+        text-align: center;        
+        text-decoration: none;    
+        display: inline-block;
+        border: 2px solid #89b2e7;        
+        border-radius: 35px;   
+}
+.name-scroll:hover {
+        background-color: #e9e9e9;
+        color: #6e98ce;
+        border: 2px solid #6e98ce;  
+        text-decoration: underline;
+}
+
+.divider{
+    border: none;
+    height: 2px;
+    background-color: #89b2e7;
+    margin: 40px auto;
+}
+
+.subsection {
+    justify-content: left;
+    margin: 20px 80px;
+}
+
+.subsection-text {
+        text-align: left;
+    }
+
+.subsection-text h1 {
+        font-size: 40px;
+        color:#89b2e7;
+        font-weight: 600;
+        margin-top: 20px;
+        font-family: "IBM Plex Sans", sans-serif;
+        line-height: 1;
+    }
+
+.subsection-text p {
+        font-size: 25px;
+        color: #444;
+        font-family: "IBM Plex Sans", sans-serif;
+        word-spacing: 1px;
+    }

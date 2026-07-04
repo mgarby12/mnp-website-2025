@@ -33,11 +33,35 @@
         display: inline-block;     
         border-radius: 35px;   
         margin-top: 10px;
+        margin-bottom: 20px
 }
 .scroll-button:hover {
         background-color: #6e98ce;
         color: #ffffff;
         text-decoration: underline;
+}
+
+.handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "IBM Plex Sans", sans-serif; 
+  word-spacing: 1px;
+  color: #89b2e7;
+  padding-left: 20px;
+}
+
+.handle-icon {
+  width: 25px;
+  height: auto;
+}
+
+.handle:hover {
+  color: #6e98ce;
+  text-decoration: underline;
 }
 
 .we-are {

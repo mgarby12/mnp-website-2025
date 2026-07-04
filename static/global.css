@@ -55,3 +55,64 @@ body {
         max-width: 55%;
         text-align: left;
     }
+
+.footer {
+    width: 100%;
+    background-color: #89b2e7;    /* #89b2e7 */
+    padding: 15px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*align links right */
+    align-items: center;
+    gap: 15px
+}
+
+.footer p{
+    color: #f0f0f0;
+    font-size: 18px;
+    letter-spacing: -.5px;
+    font-family: "IBM Plex Sans", sans-serif;
+    word-spacing: 1px;
+    text-decoration: none;
+    font-style:  italic;
+    margin: 0;
+    line-height: 1;
+}
+
+.footer a{
+    color: #f0f0f0;
+    font-size: 18px;
+    letter-spacing: -.5px;
+    font-family: "IBM Plex Sans", sans-serif;
+    word-spacing: 1px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-icon {
+    height: 35px;
+    width: auto;
+    text-decoration: none;
+    display: block; 
+}
+
+.footer-icon:hover{
+    width: auto;
+    filter: brightness(60%);
+    text-decoration: none;
+}
+
+.footer div {
+    display: flex;
+    align-items: center;
+    line-height: 1;        /* remove extra text height */
+}
+
+.footer div:nth-child(2) {
+    gap: 15px;
+}

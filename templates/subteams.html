@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='subteams.css') }}">
 </head>
 <body>
-    <nav class="navText">
+    <nav class="navText" id="top">
         <img src="{{ url_for('static', filename='media/images/logoNewOutline.png') }}" alt="Logo" class="logo">
         <a href="{{ url_for('main.home') }}">Home</a>
         <a href="{{ url_for('main.projects') }}">Projects</a>
@@ -111,6 +111,22 @@
             <h1>Assembly</h1>
             <p>Here is the information about the assembly subteam</p>
         </div>
+    </section>
+
+    <section class="footer">
+        <a href="#top" class="footer-top">BACK TO TOP</a>
+        <div>
+            <a href="https://www.instagram.com/mnprosthetics/" target="_blank">
+                    <img src="{{ url_for('static', filename='media/images/instagram_white.png') }}"
+                    alt="Instagram logo" class="footer-icon"></a>
+            <a href="https://www.linkedin.com/groups/15456036/" target="_blank">
+                    <img src="{{ url_for('static', filename='media/images/linkedin_white.png') }}"
+                    alt="LinkedIn logo" class="footer-icon"></a>
+            <a href="https://github.com/MichiganNeuroProsthetics" target="_blank">
+                    <img src="{{ url_for('static', filename='media/images/github_white.png') }}"
+                    alt="GitHub logo" class="footer-icon"></a>
+        </div>
+        <p>&copy; 2026 Michigan Neuroprosthetics &middot; Established 2015</p>
     </section>
     
 </body>

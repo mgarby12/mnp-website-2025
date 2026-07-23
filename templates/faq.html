@@ -1,38 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>FAQ</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
-</head>
-<body>
-    <nav class="navText" id="top">
-        <img src="{{ url_for('static', filename='media/images/logoNewOutline.png') }}" alt="Logo" class="logo">
-        <a href="{{ url_for('main.home') }}">Home</a>
-        <a href="{{ url_for('main.projects') }}">Projects</a>
-        <a href="{{ url_for('main.subteams') }}">Subteams</a>
-        <a href="{{ url_for('main.joinus') }}">Join Us</a>
-        <a href="{{ url_for('main.faq') }}">FAQ</a>
-    </nav>
+{# templates/faq.html #}
+{% extends "base.html" %}
 
+{% block title %}FAQ · Michigan Neuroprosthetics{% endblock %}
+
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='faq.css') }}">{% endblock %}
+
+
+{% block content %}
+
+<section class="header">
     <h1>FAQ</h1>
-    <p>Frequently Asked Questions</p>
+    <p>Everything you might want to know about joining the team.</p>
+</section>
 
-    <section class="footer">
-        <a href="#top" class="footer-top">BACK TO TOP</a>
-        <div>
-            <a href="https://www.instagram.com/mnprosthetics/" target="_blank">
-                    <img src="{{ url_for('static', filename='media/images/instagram_white.png') }}"
-                    alt="Instagram logo" class="footer-icon"></a>
-            <a href="https://www.linkedin.com/groups/15456036/" target="_blank">
-                    <img src="{{ url_for('static', filename='media/images/linkedin_white.png') }}"
-                    alt="LinkedIn logo" class="footer-icon"></a>
-            <a href="https://github.com/MichiganNeuroProsthetics" target="_blank">
-                    <img src="{{ url_for('static', filename='media/images/github_white.png') }}"
-                    alt="GitHub logo" class="footer-icon"></a>
-        </div>
-        <p>&copy; 2026 Michigan Neuroprosthetics &middot; Established 2015</p>
-    </section>
-</body>
-</html>
+<div class="faq">
+    <details class="faq-item">
+        <summary class="faq-q">How can I join?</summary>
+        <p class="faq-a">Fill out our application by clicking Join Us at the top of the page! We recruit at the start of every semester.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Do you require any experience to join the club?</summary>
+        <p class="faq-a">No background experience is required to join the club, but we welcome any previous experience in 3D printing.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Do you have to be an engineering student?</summary>
+        <p class="faq-a">Not at all! We have students from all different majors, ranging from movement science to neuroscience.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Do you have to be an undergraduate student to join?</summary>
+        <p class="faq-a">We welcome graduate students and even those who aren't in university! Just get in contact with us and we'll see how we can get you involved.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">When do you accept applications and when are results out?</summary>
+        <p class="faq-a">We recruit students every semester during the first 3 weeks, and results are released near the latter half of that time frame.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">How long is training for subteams?</summary>
+        <p class="faq-a">Training duration varies depending on which subteam you're accepted into, and can range from 4 to 10 hours.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">What is the weekly commitment?</summary>
+        <p class="faq-a">The weekly time commitment varies depending on the subteam and can range from 1 to 3 hours per week.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">Are students limited to joining only one subteam?</summary>
+        <p class="faq-a">Students are able to join multiple subteams, and many explore different teams across semesters.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-q">What are you looking for in an applicant?</summary>
+        <p class="faq-a">People who are self-motivated, creative, remain committed, and communicate well with the club!</p>
+    </details>
+</div>
+
+<p class="faq-contact">
+    Still have a question? <a href="mailto:michigan.neuroprosthetics@umich.edu" class="email-link">Email us</a> and we'll get back to you within 24 hours.
+</p>
+
+{% endblock %}

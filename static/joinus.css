@@ -1,0 +1,135 @@
+.join {
+    margin: 40px 80px;
+    font-family: "IBM Plex Sans", sans-serif;
+    text-align: center;
+}
+
+.join-title {
+    font-size: 40px;
+    font-weight: 650;
+    color: #38649f;
+    margin: 0 0 10px;
+}
+
+.join-tagline {
+    font-size: 20px;
+    color: #444;
+    max-width: 640px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+/* three why-join cards */
+.join-why {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    margin-bottom: 45px;
+}
+
+.why-card {
+    flex: 1;
+    background: #ffffff;
+    box-shadow: 0 0 18px #C1CFE3;
+    border-radius: 16px;
+    padding: 22px 26px;
+}
+
+.why-card h3 {
+    margin: 0 0 8px;
+    color: #38649f;
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.why-card p {
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.join-cta {
+    margin-bottom: 20px;
+    display: inline-block;
+    background: #38649f;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 650;
+    padding: 14px 40px;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 0 18px #C1CFE3;
+    transition: background 0.15s ease;
+}
+
+.join-cta:hover {
+    background: #2c4f7f;
+    color: #edd051
+}
+
+.join-next {
+    font-size: 15px;
+    color: #666;
+    max-width: 520px;
+    margin: 16px auto 0;
+    line-height: 1.5;
+}
+
+.join-ready {
+    font-size: 26px;
+    font-weight: 650;
+    color: #38649f;
+    margin: 0 0 20px;
+}
+
+.join-questions {
+    margin-bottom: 30px;
+}
+
+.join-questions-label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #38649f;
+    margin: 0 0 16px;
+}
+
+.join-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* outlined buttons — secondary to the solid CTA above */
+.join-btn {
+    display: inline-block;
+    color: #38649f;
+    font-size: 16px;
+    font-weight: 650;
+    padding: 10px 24px;
+    border: 2px solid #38649f;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.join-btn:hover {
+    background: #38649f;
+    color: #edd051;
+}
+
+.join-or {
+    font-size: 18px;
+    color: #444;
+    line-height: 44px;
+    align-self: center;
+}
+
+/* stack on narrow screens */
+@media (max-width: 700px) {
+    .join { margin: 40px 20px; }
+    .join-why { flex-direction: column; }
+    .join-links { flex-direction: column; gap: 12px; align-items: center; }
+}

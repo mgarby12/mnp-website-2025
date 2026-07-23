@@ -4,7 +4,7 @@ main_routes = Blueprint('main', __name__)
 
 @main_routes.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 @main_routes.route('/projects')
 def projects():
@@ -21,5 +21,9 @@ def faq():
 @main_routes.route('/subteams')
 def subteams():
     return render_template('subteams.html')
+
+@main_routes.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 

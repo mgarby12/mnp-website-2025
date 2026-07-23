@@ -1,0 +1,54 @@
+{# templates/base.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Michigan Neuroprosthetics{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navText" id="top">
+        <img src="{{ url_for('static', filename='media/images/logoBlank.png') }}" alt="MNP Logo" class="logo">
+        <a href="{{ url_for('main.home') }}"
+        {% if request.endpoint == 'main.home' %}aria-current="page"{% endif %}>Home</a>
+        <a href="{{ url_for('main.projects') }}"
+        {% if request.endpoint == 'main.projects' %}aria-current="page"{% endif %}>Projects</a>
+        <a href="{{ url_for('main.subteams') }}"
+        {% if request.endpoint == 'main.subteams' %}aria-current="page"{% endif %}>Subteams</a>
+        <a href="{{ url_for('main.joinus') }}"
+        {% if request.endpoint == 'main.joinus' %}aria-current="page"{% endif %}>Join Us</a>
+        <a href="{{ url_for('main.faq') }}"
+        {% if request.endpoint == 'main.faq' %}aria-current="page"{% endif %}>FAQ</a>
+        <a href="{{ url_for('main.contact') }}"
+        {% if request.endpoint == 'main.contact' %}aria-current="page"{% endif %}>Contact</a>
+        <a href="https://giving.umich.edu/um/#!/give/basket/fund/925419" target="_blank" class="donate">Donate</a>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <section class="footer">
+        <a href="{{ url_for('main.home') }}"
+        {% if request.endpoint == 'main.home' %}aria-current="page"{% endif %} class="footer-top">BACK TO HOMEPAGE</a>
+        <div>
+            <a href="https://www.instagram.com/mnprosthetics/" target="_blank">
+                    <img src="{{ url_for('static', filename='media/images/instagram_white.png') }}"
+                    alt="Instagram logo" class="footer-icon"></a>
+            <a href="https://www.linkedin.com/groups/15456036/" target="_blank">
+                    <img src="{{ url_for('static', filename='media/images/linkedin_white.png') }}"
+                    alt="LinkedIn logo" class="footer-icon"></a>
+            <a href="https://github.com/MichiganNeuroProsthetics" target="_blank">
+                    <img src="{{ url_for('static', filename='media/images/github_white.png') }}"
+                    alt="GitHub logo" class="footer-icon"></a>
+        </div>
+        <p>&copy; 2026 Michigan Neuroprosthetics &middot; Established 2015</p>
+    </section>
+
+
+</body>
+</html>
+

@@ -1,37 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}"></head>
-<body>
-    <nav class="navText" id="top">
-        <img src="{{ url_for('static', filename='media/images/logoNewOutline.png') }}" alt="Logo" class="logo">
-        <a href="{{ url_for('main.home') }}">Home</a>
-        <a href="{{ url_for('main.projects') }}">Projects</a>
-        <a href="{{ url_for('main.subteams') }}">Subteams</a>
-        <a href="{{ url_for('main.joinus') }}">Join Us</a>
-        <a href="{{ url_for('main.faq') }}">FAQ</a>
-    </nav>
+{# templates/projects.html #}
+{% extends "base.html" %}
 
-    <h1>Projects</h1>
-    <p>Here are the projects we're working on!</p>
+{% block title %}Projects · Michigan Neuroprosthetics{% endblock %}
 
-    <section class="footer">
-        <a href="#top" class="footer-top">BACK TO TOP</a>
-        <div>
-            <a href="https://www.instagram.com/mnprosthetics/" target="_blank">
-                    <img src="{{ url_for('static', filename='media/images/instagram_white.png') }}"
-                    alt="Instagram logo" class="footer-icon"></a>
-            <a href="https://www.linkedin.com/groups/15456036/" target="_blank">
-                    <img src="{{ url_for('static', filename='media/images/linkedin_white.png') }}"
-                    alt="LinkedIn logo" class="footer-icon"></a>
-            <a href="https://github.com/MichiganNeuroProsthetics" target="_blank">
-                    <img src="{{ url_for('static', filename='media/images/github_white.png') }}"
-                    alt="GitHub logo" class="footer-icon"></a>
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">{% endblock %}
+
+
+{% block content %}
+
+    <section class="header">
+        <div class="header-text">
+            <h1>Projects</h1>
+            <p>Here are some of our current and past projects:</p>
         </div>
-        <p>&copy; 2026 Michigan Neuroprosthetics &middot; Established 2015</p>
     </section>
-</body>
-</html>
+
+    <section class="projects">
+        <div class="project-panel">
+            <h1>DexHand Arm</h1>
+            <h2>IN PROGRESS</h2>
+            <p>Prototyping and early development stages.</p>
+            <p>More information on this</p>
+        </div>
+
+        <div class="project-panel">
+            <h1>Michael's Single Motor Arm</h1>
+            <h2>IN PROGRESS</h2>
+            <p>Michael, 18, was born with an underdeveloped left arm below the elbow.
+                Growing up, that meant questions from classmates, extra effort on monkey bars and push-ups,
+                and everyday hurdles with two-handed tasks like cooking and yardwork.</p>
+            <p>His family's first prosthetic was uncomfortable and limited. Working with our team,
+                he now has a fully customized, Terminator-themed robotic arm with lights — and voice
+                control coming next.</p>
+            <div class="quote">
+                <p>“All the students make me feel special and important.
+                Never give up. Don't ever let your disability stop you.”</p>
+                <p class="attribution">— Michael</p>
+            </div>
+        </div>
+
+        <div class="project-panel">
+            <h1>NERD's Arm</h1>
+            <h2>IN PROGRESS</h2>
+            <p>This is a mechanical subteam project for the NERDs show in April.</p>
+            <p>More information on this</p>
+
+        </div>
+
+        <div class="project-panel">
+            <h1>Julian's Arm</h1>
+            <h2>COMPLETED</h2>
+            <p>We first met Julian when he was eight years old, through the E-Nable organization.
+                His electric arm had become outgrown and a replacement was unaffordable,
+                so our team designed and built a body-powered prosthetic arm for him.</p>
+            <p>Body-powered prosthetics are a much cheaper alternative that provide essential
+                functions through specific body movements, a practical, durable option for a
+                fast-growing kid. Julian has since progressed from his mechanical arm to a myoelectric arm.</p>
+        </div>
+    </section>
+    
+
+{% endblock %}
+
+    
+    

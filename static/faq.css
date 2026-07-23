@@ -1,0 +1,94 @@
+.header {
+    margin: 40px 80px;
+    font-family: "IBM Plex Sans", sans-serif;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 40px;
+    font-weight: 650;
+    color: #38649f;
+    margin: 0 0 10px;
+}
+
+.header p {
+    font-size: 20px;
+    color: #444;
+    max-width: 640px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+
+.faq {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: "IBM Plex Sans", sans-serif;
+    background: #fff;
+    box-shadow: 0 0 18px #C1CFE3;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+}
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-q {
+    position: relative;
+    padding: 20px 50px 20px 24px;   /* right padding leaves room for the icon */
+    font-size: 18px;
+    font-weight: 650;
+    color: #38649f;
+    cursor: pointer;
+    list-style: none;               /* hide default triangle */
+}
+.faq-q::-webkit-details-marker {
+    display: none;                  /* hide default triangle in Safari/Chrome */
+}
+
+/* the + / × icon on the right */
+.faq-q::after {
+    content: "+";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 26px;
+    color: #edd051;                 /* your gold */
+    font-weight: 400;
+}
+.faq-item[open] .faq-q::after {
+    content: "\00D7";               /* × when open */
+}
+
+.faq-a {
+    margin: 0;
+    padding: 0 24px 20px;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.faq-contact {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.email-link {
+    color: #38649f;                  /* brand blue */
+    font-weight: 650;                /* bold, like your other emphasis */
+    text-decoration: none;           /* drop the default underline */
+    border-bottom: 3px solid #edd051; /* gold underline */
+    padding-bottom: 1px;             /* tiny gap between text and line */
+}
+
+.email-link:hover {
+    border-bottom-color: #38649f;    /* underline turns blue on hover */
+}

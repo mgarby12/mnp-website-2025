@@ -1,0 +1,313 @@
+.hero {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        padding: 0px 80px 1px
+    } 
+
+.hero-text {
+        max-width: 55%;
+        text-align: left;
+    }
+
+.hero-text h1 {
+        font-size: 60px;
+        color:#38649f;
+        font-weight: 700;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        font-family: "IBM Plex Sans", sans-serif;
+        line-height: 1;
+    }
+
+.hero-text p {
+        font-size: 22px;
+        color: #444;
+        font-family: "IBM Plex Sans", sans-serif;
+        word-spacing: 1px;
+    }
+
+.hero-image img {
+        margin-top: 10px;
+        width: 430px;
+        height: auto;
+    }
+
+.scroll-button {
+        font-size: 27px;
+        font-family: "IBM Plex Sans", sans-serif; 
+        font-weight: 450;
+        word-spacing: 1px;
+        padding: 14px 35px;        
+        text-align: center;        
+        text-decoration: none;    
+        display: inline-block;     
+        border-radius: 35px;   
+        margin-top: 10px;
+        margin-bottom: 20px;
+        position: relative;   /* makes this the anchor the fill layer positions against */
+        z-index: 0;           /* creates a stacking context so the fill can hide behind */
+        overflow: hidden;     /* clips the fill to the button's rounded shape */
+        border: 2px solid #38649f;
+        color: #38649f;       /* text color in the resting state (blue on light bg) */
+        background: transparent;
+        transition: color 0.4s ease;  /* text recolors smoothly over 0.4s instead of snapping */
+}
+
+.scroll-button::before{
+    content: "";              /* required, or the pseudo-element won't exist */
+    position: absolute;       /* take it out of normal flow and pin it to the button */
+    inset: 0;                 /* stretch it to all four edges (top/right/bottom/left = 0) */
+    z-index: -1;              /* sit it behind the text */
+    background: #38649f;      /* the color that wipes in */
+    transform: scaleX(0);     /* start squished to zero width... */
+    transform-origin: left;   /* ...collapsed toward the LEFT edge, so it grows rightward */
+    transition: 0.4s ease;  /* animate that stretch over 0.4s */
+}
+.scroll-button:hover {
+    color: #edd051;    
+}
+
+.scroll-button:hover::before {
+    transform: scaleX(1);
+}
+
+.handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "IBM Plex Sans", sans-serif; 
+  word-spacing: 1px;
+  color: #38649f;
+  padding-bottom: 1px;
+  margin-left: 20px;
+
+  background: linear-gradient(#edd051, #edd051) left bottom no-repeat;
+  background-size: 0% 3px;
+  transition: 0.4s ease;
+
+}
+
+.handle-icon {
+  width: 25px;
+  height: auto;
+}
+
+.handle:hover {
+  filter: drop-shadow(2px 2px 1px #C1CFE3);
+  background-size: 100% 3px;
+}
+
+.we-are {
+        display: flex;
+        background-color: #ffffff;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 80px 40px;
+        max-width: 100%;
+    } 
+
+.we-are-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.we-are-text h1 {
+    font-size: 35px;
+    color:#38649f;
+    font-weight: 650;
+    margin-bottom: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+    text-align: center; 
+    width: 500px
+}
+
+.we-are-text h2 {
+    font-size: 25px;
+    color:#38649f;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+    width: 250px;
+    align-items: center;    
+}
+
+.we-are-text p {
+    font-size: 20px;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+    word-spacing: 1px;
+    width: 250px;
+    margin-top: 10px
+}
+
+.we-are-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 240px;
+    margin: 0 auto;
+    
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.slideshow {
+    position: relative;
+    margin-right: 60px;
+    overflow: hidden;
+    width: 450px; 
+    height: 550px;
+    
+    border: 4px solid #38649f; /* Added 'solid' so the border actually shows */
+    border-radius: 2px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+    /* Initial state: invisible */
+    opacity: 0;
+  
+    /* Total animation time (e.g., 20s for 4 images = 5s per image) */
+    animation: fade-rotate 20s infinite;
+}
+
+/* Stagger the start times */
+/* If total time is 20s and you have 4 images, delay by 5s increments */
+    .slide:nth-child(1) { animation-delay: 0s; }
+    .slide:nth-child(2) { animation-delay: 5s; }
+    .slide:nth-child(3) { animation-delay: 10s; }
+    .slide:nth-child(4) { animation-delay: 15s; }
+
+@keyframes fade-rotate {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; } /* Fade in quickly at the start */
+    25%  { opacity: 1; } /* Stay solid for a bit */
+    35%  { opacity: 0; } /* Fade out */
+    100% { opacity: 0; } /* Stay invisible for the rest of the loop */
+}
+
+.testimonial {
+    background-color: #ffffff;
+    padding: 0px 80px 20px;
+    margin: 40px auto;
+    padding: 10px 30px;
+    box-shadow: 0 0 18px #C1CFE3;
+    border-radius: 20px;
+    max-width: 95%;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+} 
+
+.testimonial-text {
+    text-align: left;
+}
+
+.testimonial-text p {
+    font-size: 20px;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: italic;
+    word-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.testimonial-text h1 {
+    font-size: 35px;
+    color:#38649f;
+    font-weight: 650;
+    margin-bottom: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+}
+
+.testimonial-text h2 {
+    font-size: 25px;
+    color:#38649f;
+    font-weight: 650;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+    text-align: right;
+    margin-top: 0;
+}
+
+.why-section {
+    margin: 40px 80px;                    /* matches your .projects side spacing */
+    font-family: "IBM Plex Sans", sans-serif;
+    text-align: center;                   /* body is already centered — this keeps the heading centered */
+}
+
+.why-heading {
+    font-size: 60px;
+    font-weight: 700;
+    color: #38649f;                       /* your brand blue */
+    margin: 0 30px;
+}
+
+.why-subheading {
+    margin: 0;
+    color: #38649f;
+    font-size: 22px;
+    font-weight: 300;
+    max-width: 350px;
+}
+
+.why-panels {
+    display: flex;
+    gap: 24px;
+    align-items: center;                 /* all three panels match height */
+}
+
+.why-panel {
+    flex: 1;                              /* equal thirds */
+    background: #ffffff;
+    box-shadow: 0 0 18px #C1CFE3;         /* same shadow as your project panels */
+    border-radius: 16px;
+    padding: 22px 26px;
+}
+
+.why-panel h3 {
+    margin: 0 0 8px;
+    color: #38649f;
+    font-size: 40px;
+    font-weight: 650;                     /* matches your h1 weight */
+}
+
+.why-panel p {
+    margin: 0;
+    color: #444;
+    font-size: 18px;
+}
+
+.why-paragraphs {
+    margin: 30px 90px;
+    color: #444;
+    font-size: 22px;
+}
+
+#about-us {
+    scroll-margin-top: 70px;
+}

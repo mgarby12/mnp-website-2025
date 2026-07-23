@@ -1,0 +1,110 @@
+.header {
+        display: flex;
+        background-color: #ffffff;
+        margin-left: 80px;
+    } 
+
+.header-text {
+        text-align: left;
+        font-family: "IBM Plex Sans", sans-serif;
+        line-height: 1;
+    }
+
+.header-text h1 {
+        font-size: 40px;
+        color:#38649f;
+        font-weight: 650;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
+.header-text p {
+        margin-top: 0px;
+        font-size: 20px;
+        color: #444;
+        font-family: "IBM Plex Sans", sans-serif;
+        word-spacing: 1px;
+    }
+
+.projects {
+    display: block;
+    background-color: #ffffff;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    gap: 50px;
+}
+
+.project-panel {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    box-shadow: 0 0 18px #C1CFE3;
+    border-radius: 20px;
+    max-width: 95%;
+    text-align: left;
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1;
+}
+
+.project-panel h1 {
+    margin: 25px 0px 15px 10px;
+    font-size: 30px;
+    color:#38649f;
+    font-weight: 650;
+}
+
+.project-panel h2 {
+    margin: 0 10px;
+    display: inline-block;
+    padding: 2px 7px;
+    background: #edd051; 
+    color: #38649f;       
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 900;    
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+.project-panel p {
+    margin: 15px 10px 25px;
+    font-size: 20px;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+    word-spacing: 1px;
+    max-width: calc(100vw - 150px);
+    line-height: 1.5;
+}
+
+.quote {
+    margin: 15px 60px 25px;
+}
+
+.quote p {
+    margin: 0;
+    padding: 14px 18px;
+    background: #fdf9e9;             /* pale tint of your gold */
+    border: none;                   /* drop the input-field outline */
+    border-left: 5px solid #edd051; /* single accent edge */
+    border-radius: 4px;             /* subtle, only softens corners */
+    font-size: 18px;
+    font-style: italic;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+    word-spacing: 1px;
+}
+
+.quote .attribution {
+    margin: 8px 18px 0;      /* small gap above, aligned with quote's inner padding */
+    padding: 0;
+    background: none;         /* override the tinted quote-box background */
+    border: none;            /* override the left accent border */
+    font-size: 16px;         /* smaller than the quote itself */
+    font-style: normal;      /* upright, so it contrasts the italic quote */
+    font-weight: 600;
+    color: #38649f;          /* your brand blue ties it to the panel */
+    text-align: right;       /* sits at the end, classic attribution spot */
+}

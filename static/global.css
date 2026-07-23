@@ -1,64 +1,101 @@
+/*yellow: #edd051*/
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     text-align: center;
-    margin-top: 5px;
+    margin: 0;
 }
 .navText {
+        left: 0;
+        right: 0;
+        margin: 0;
         width: 100%;
-        background-color: #89b2e7;    /* #89b2e7 */
-        padding: 7px 30px;
+        background-color: #38649f;    /* #89b2e7 */
+        padding: 12px 30px;
         box-sizing: border-box;
         display: flex;
         justify-content: flex-end;  /*align links right */
         align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
 }
 
 .logo {
     width: 250px;
     height: auto;   
     margin-right: auto;
-    filter: drop-shadow(0 0 2px #f0f0f0);
+    filter: drop-shadow(0 0 3px #C1CFE3);
 }
 
 .navText a,
 .navText a:visited,
 .navText a:active {
-            color: #f0f0f0;
-            font-size: 30px;
+            color: #ffffff;
+            padding-bottom: 1px;
+            font-size: 22px;
             letter-spacing: -.5px;
             font-family: "IBM Plex Sans", sans-serif;
             font-weight: 500;
             word-spacing: 1px;
-            margin-right: 40px; /* space to the right of each link */
+            margin-right: 30px; /* space to the right of each link */
             text-align: right;
             font-variant: normal;
             text-decoration: none;   /* remove underline */
+            background: linear-gradient(#edd051, #edd051) left bottom no-repeat;
+            background-size: 0% 3px;
+            transition: 0.4s ease;
         }
 .navText a:hover {
-            color: #ffffff;
-            text-decoration: underline;
+            color: #edd051;
+            background-size: 100% 3px;
         }
 
-.hero {
-        display: flex;
-        justify-content: space-between;
-        background-color: #f0f0f0;
-        padding: 80px 80px 1px
-    } 
 
-.hero-text {
-        max-width: 55%;
-        text-align: left;
-    }
+.navText a.donate,
+.navText a.donate:visited,
+.navText a.donate:active {
+    display: inline-block;
+    color: #2c4f7f;
+    background: #edd051;          /* solid — overrides the gradient now */
+    background-size: auto;        /* cancel the 0% 3px underline sizing */
+    border-radius: 20px;
+    padding: 2px 10px 0px 10px;            /* real padding so the pill has shape */
+    padding-bottom: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    margin-right: 30px;
+    transition: background 0.3s ease;
+}
+
+/* stop the nav's gold-underline hover from hitting Donate */
+.navText a.donate:hover {
+    color: #38649f;               /* keep text blue, not gold */
+    background: #cbad2a;          /* deeper gold pill on hover instead */
+    background-size: auto;
+}
+
+nav a[aria-current="page"] {
+    filter: drop-shadow(0 0 7px #edd051);
+}
+
+.divider{
+    border: none;
+    height: 2px;
+    background-color: #38649f;
+    margin: 40px 80px;
+}
 
 .footer {
     width: 100%;
-    background-color: #89b2e7;    /* #89b2e7 */
+    background-color: #38649f;    /* #89b2e7 */
     padding: 15px 30px;
     box-sizing: border-box;
     display: flex;
@@ -69,7 +106,7 @@ body {
 }
 
 .footer p{
-    color: #f0f0f0;
+    color: #ffffff;
     font-size: 18px;
     letter-spacing: -.5px;
     font-family: "IBM Plex Sans", sans-serif;
@@ -81,16 +118,17 @@ body {
 }
 
 .footer a{
-    color: #f0f0f0;
+    color: #ffffff;
     font-size: 18px;
     letter-spacing: -.5px;
     font-family: "IBM Plex Sans", sans-serif;
     word-spacing: 1px;
     text-decoration: none;
+    transition: 0.5s ease;
 }
 
 .footer a:hover{
-    color: #ffffff;
+    color: #edd051;
     text-decoration: underline;
 }
 
@@ -99,11 +137,12 @@ body {
     width: auto;
     text-decoration: none;
     display: block; 
+    transition: 0.4s ease;
 }
 
 .footer-icon:hover{
     width: auto;
-    filter: brightness(60%);
+    filter: brightness(90%) drop-shadow(0 0 4px #F2DA6D);
     text-decoration: none;
 }
 
@@ -115,4 +154,8 @@ body {
 
 .footer div:nth-child(2) {
     gap: 15px;
+}
+
+strong {
+    color: #38649f;   /* your brand blue */
 }
